@@ -4,6 +4,8 @@ import os
 import sys
 import getopt
 import socket
+import io
+import qrcode
 from flask import Flask, send_file, make_response
 from dataclasses import dataclass
 
@@ -46,6 +48,7 @@ def main(argv):
     if (program_options.file != ""):
         server_url = f"http://{program_options.ip}:{program_options.port}"
         print(server_url) # print server url
+        print(get_qrcode(server_url)) # print the qrcode of url
 
         # run web server
         APP.run(host=program_options.ip, port=program_options.port, debug=False, use_reloader=False)
@@ -56,6 +59,14 @@ def help_options():
     print("-h # print help menu")
     print("-f <file> # file to stream, this option is MANDATORY")
     print(f"-p <port> # port to stream on, default port is {DEFAULT_PORT}")
+
+def get_qrcode(string):
+    qr = qrcode.QRCode()
+    qr.add_data(string)
+    f = io.StringIO()
+    qr.print_ascii(out=f)
+    f.seek(0)
+    return f.read()
 
 @APP.route('/')
 def serve_video():

@@ -4,6 +4,9 @@ Yes, so this project is just for you. Term_streamer allows you to stream videos 
 computer or just about anything that supports modern web browser such as firefox or chromium.
 Term_streamer create flask server which can stream video to multiple devices at the same time.
 
+After you run the program it will show you url to the site with video and
+also it will show you qrcode of that url.
+
 # Usage
 Basic usage of term_streamer
 
