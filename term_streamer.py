@@ -35,13 +35,13 @@ def main(argv):
             exit()
         elif (opt == "-f"):
             try:
-                program_options.file = str(arg)
+                program_options.file = os.path.realpath(str(arg))
             except ValueError: # error if user didn't pass path after -f flag
                 print("-f flag should be followed by file path")
                 sys.exit(1)
         elif (opt == "-d"):
             try:
-                program_options.directory = str(arg)
+                program_options.directory = os.path.realpath(str(arg))
             except ValueError: # error if user didn't pass directory after -d flag
                 print("-d flag should be followed by directory path")
                 sys.exit(1)
