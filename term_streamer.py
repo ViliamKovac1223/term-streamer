@@ -36,12 +36,18 @@ def main(argv):
         elif (opt == "-f"):
             try:
                 program_options.file = os.path.realpath(str(arg))
+                if (not os.path.exists(program_options.file) or not os.path.isfile(program_options.file)):
+                    print("File doesn't exist")
+                    exit()
             except ValueError: # error if user didn't pass path after -f flag
                 print("-f flag should be followed by file path")
                 sys.exit(1)
         elif (opt == "-d"):
             try:
                 program_options.directory = os.path.realpath(str(arg))
+                if (not os.path.exists(program_options.directory) or not os.path.isdir(program_options.directory)):
+                    print("Directory doesn't exist")
+                    exit()
             except ValueError: # error if user didn't pass directory after -d flag
                 print("-d flag should be followed by directory path")
                 sys.exit(1)
