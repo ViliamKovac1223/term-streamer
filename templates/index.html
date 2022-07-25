@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>term_streamer</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/static/style/general.css">
+    <link rel="stylesheet" href="/static/style/main.css">
+    
+    <div id="list">
+        {% for link, file_name in files.items(): %}
+            <a href="/?{{ arg_location_key }}={{ link }}">{{ file_name }}</a>
+        {% endfor %}
+    </div>
+</body>
+</html>

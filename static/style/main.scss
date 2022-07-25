@@ -1,0 +1,13 @@
+#list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    *{
+        padding: 3px;
+        flex: 1 0 100%;
+        text-align: center;
+        text-decoration: none;
+    }
+}

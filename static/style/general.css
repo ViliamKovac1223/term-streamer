@@ -1,0 +1,12 @@
+* body {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #151515;
+}
+
+* body p, * body a, * body h1 {
+  color: #B4A5A5;
+}
+/*# sourceMappingURL=general.css.map */
