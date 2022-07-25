@@ -23,7 +23,7 @@ Basic usage of term_streamer
 
 -p <port> # port to stream on, default port is 8000
 
-you have to use -f or -d flag"
+you have to use -f or -d flag
 
 # Installation
 
