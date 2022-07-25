@@ -17,9 +17,13 @@ Basic usage of term_streamer
 # All command options
 -h # print help menu
 
--f <file> # file to stream, this option is MANDATORY
+-f <file> # file to stream
+
+-d <directory_with_video_files> # directory to stream from
 
 -p <port> # port to stream on, default port is 8000
+
+you have to use -f or -d flag"
 
 # Installation
 

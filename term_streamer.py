@@ -72,8 +72,8 @@ def main(argv):
 def help_options():
     print("-h # print help menu")
     print("-f <file> # file to stream")
+    print("-d <directory_with_video_files> # directory to stream from")
     print(f"-p <port> # port to stream on, default port is {DEFAULT_PORT}")
-    print("-d <directory_with_video_files> # file to stream")
     print("you have to use -f or -d flag")
 
 def get_qrcode(string):
